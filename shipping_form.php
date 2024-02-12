@@ -78,7 +78,7 @@
             <br />
 
             <label>Total Value: $</label>
-            <input type="number" name="total" min="0" placeholder="350" value="<?php echo htmlspecialchars($total);?>">
+            <input type="number" name="total" min="0" step="0.01" placeholder="350" value="<?php echo htmlspecialchars($total);?>">
             <br />
 
             <input type="submit" value="Create">
