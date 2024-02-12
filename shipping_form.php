@@ -34,27 +34,27 @@
 
             <!-- info for the to address -->
             <label>First Name:</label>
-            <input type="text" name="first_name" value="<?php echo htmlspecialchars($first_name);?>"/>
+            <input type="text" name="first_name" required value="<?php echo htmlspecialchars($first_name);?>"/>
             <br />
 
             <label>Last Name:</label>
-            <input type="text" name="last_name" value="<?php echo htmlspecialchars($last_name);?>"/>
+            <input type="text" name="last_name" required value="<?php echo htmlspecialchars($last_name);?>"/>
             <br />
 
             <label>Street Address:</label>
-            <input type="text" name="street_address" placeholder="Ex. 123 Maple Ave" value="<?php echo htmlspecialchars($street_address);?>"/>
+            <input type="text" name="street_address" required placeholder="Ex. 123 Maple Ave" value="<?php echo htmlspecialchars($street_address);?>"/>
             <br />
 
             <label>City:</label>
-            <input type="text" name="city" placeholder="Ex. Newark" value="<?php echo htmlspecialchars($city);?>"/>
+            <input type="text" name="city" required placeholder="Ex. Newark" value="<?php echo htmlspecialchars($city);?>"/>
             <br />
 
             <label>State (Initial):</label>
-            <input type="text" name="state" maxlength="2" placeholder="Ex. NJ" value="<?php echo htmlspecialchars($state);?>"/>
+            <input type="text" name="state" required maxlength="2" placeholder="Ex. NJ" value="<?php echo htmlspecialchars($state);?>"/>
             <br />
 
             <label>Zip Code:</label>
-            <input type="number" min="0" name="zip" maxlength="5" placeholder="Ex. 12345" value="<?php echo htmlspecialchars($zip);?>"/>
+            <input type="text" min="0" name="zip" required maxlength="5" placeholder="Ex. 12345" value="<?php echo htmlspecialchars($zip);?>"/>
             <br />
 
             <label>Ship Date:</label>
@@ -66,15 +66,15 @@
             <br />
 
             <label>Dimension:<br />Length:</label>
-            <input type="number" name="length" min="0" placeholder="20" value="<?php echo htmlspecialchars($length);?>"/>
+            <input type="number" name="length" min="0" step="0.01" placeholder="20" value="<?php echo htmlspecialchars($length);?>"/>
             <br />
 
             <label>Width:</label>
-            <input type="number" name="width" min="0" placeholder="20" value="<?php echo htmlspecialchars($width);?>"/>
+            <input type="number" name="width" min="0" step="0.01" placeholder="20" value="<?php echo htmlspecialchars($width);?>"/>
             <br />
 
             <label>Height</label>
-            <input type="number" name="height" min="0" placeholder="20" value="<?php echo htmlspecialchars($height);?>"/>
+            <input type="number" name="height" min="0" step="0,01" placeholder="20" value="<?php echo htmlspecialchars($height);?>"/>
             <br />
 
             <label>Total Value: $</label>
