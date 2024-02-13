@@ -1,0 +1,40 @@
+/* main page */
+body {
+    background-color: rgba(0, 153, 255, 0.5);
+}
+
+header {
+    background-color: rgb(102,102,204, 0.4);
+    padding: 40;
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+header img {
+    float: left;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    font-size: 20;
+    font-weight: bold;
+}
+
+footer {
+    background-color: rgb(102,102,204, 0.4);
+    padding: 40;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20;
+}
+
+#main_page {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#main_page h2 {
+
+    text-align: center;
+}
