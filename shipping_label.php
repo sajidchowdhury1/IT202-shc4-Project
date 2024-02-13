@@ -49,12 +49,11 @@
         $error_message .= "Height cannot be greater 36 inches.<br>";
     }
 
-    $zip_string = "" . $zip;
     if($zip === FALSE){
         $error_message .= "Need to type in a valid zip code.<br>";
-    } else if (strlen($zip_string) < 0){
+    } else if (strlen($zip) <= 0){
         $error_message .= "Zip code format is not valid.<br>";
-    } else if (strlen($zip_string) >= 6){
+    } else if (strlen($zip) > 5){
         $error_message .= "Zip code format is not valid.<br>";
     }
 
@@ -86,6 +85,7 @@
     <head>
         <title>Shipping Label</title>
         <link rel="stylesheet" href="smart_home.css"/>
+        <link rel="shortcut icon" href="images/homeicon.png">
     </head>
     <body>
         <?php include("header.php")?>    

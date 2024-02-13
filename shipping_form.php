@@ -19,72 +19,76 @@
     <head>
         <title>Smarter Homes || Shipping</title>
         <link href="smart_home.css" rel="stylesheet">
+        <link rel="shortcut icon" href="images/homeicon.png">
     </head>
     <body>
         <?php include("header.php");?>
         
-        <main>
+        <main id="form">
             <h2>Smarter Homes Shipping</h2>
             <?php 
                 // this is to print the error message
-                echo "<p>" . $error_message . "</p>";
+                echo '<p style="color: red; font-weight: bold; font-size: 20px; text-align: center;">' . $error_message . "</p>";
             ?>
-            <form action="shipping_label.php" method="post">
+            <div id="shipform">
+                <form action="shipping_label.php" method="post">
 
-                <!--error message -->
+                    <!--error message -->
 
-                <!-- info for the to address -->
-                <label>First Name:</label>
-                <input type="text" name="first_name" required value="<?php echo htmlspecialchars($first_name);?>"/>
-                <br />
+                    <!-- info for the to address -->
+                    <label>First Name:</label> <br />
+                    <input type="text" name="first_name" required placeholder="Ex. John" value="<?php echo htmlspecialchars($first_name);?>"/>
+                    <br />
 
-                <label>Last Name:</label>
-                <input type="text" name="last_name" required value="<?php echo htmlspecialchars($last_name);?>"/>
-                <br />
+                    <label>Last Name:</label> <br />
+                    <input type="text" name="last_name" required placeholder="Ex. Doe" value="<?php echo htmlspecialchars($last_name);?>"/>
+                    <br />
 
-                <label>Street Address:</label>
-                <input type="text" name="street_address" required placeholder="Ex. 123 Maple Ave" value="<?php echo htmlspecialchars($street_address);?>"/>
-                <br />
+                    <label>Street Address:</label> <br />
+                    <input type="text" name="street_address" required placeholder="Ex. 123 Maple Ave" value="<?php echo htmlspecialchars($street_address);?>"/>
+                    <br />
 
-                <label>City:</label>
-                <input type="text" name="city" required placeholder="Ex. Newark" value="<?php echo htmlspecialchars($city);?>"/>
-                <br />
+                    <label>City:</label> <br />
+                    <input type="text" name="city" required placeholder="Ex. Newark" value="<?php echo htmlspecialchars($city);?>"/>
+                    <br />
 
-                <label>State (Initial):</label>
-                <input type="text" name="state" required maxlength="2" placeholder="Ex. NJ" value="<?php echo htmlspecialchars($state);?>"/>
-                <br />
+                    <label>State (Initial):</label> <br />
+                    <input type="text" name="state" maxlength="2" placeholder="Ex. NJ" value="<?php echo htmlspecialchars($state);?>"/>
+                    <br />
 
-                <label>Zip Code:</label>
-                <input type="text" min="0" name="zip" required maxlength="5" placeholder="Ex. 12345" value="<?php echo htmlspecialchars($zip);?>"/>
-                <br />
+                    <label>Zip Code:</label> <br />
+                    <input type="text" min="0" name="zip" maxlength="5" placeholder="Ex. 12345" value="<?php echo htmlspecialchars($zip);?>"/>
+                    <br />
 
-                <label>Ship Date:</label>
-                <input type="date" name="ship_date" value="<?php echo htmlspecialchars($ship_date);?>"/>
-                <br />
+                    <label>Ship Date:</label> <br />
+                    <input type="date" name="ship_date" value="<?php echo htmlspecialchars($ship_date);?>"/>
+                    <br />
 
-                <label>Order Number:</label>
-                <input type="number" name="order_number" placeholder="2313455345" value="<?php echo htmlspecialchars($order_number);?>"/>
-                <br />
+                    <label>Order Number:</label> <br />
+                    <input type="number" name="order_number" placeholder="231343" value="<?php echo htmlspecialchars($order_number);?>"/>
+                    <br />
 
-                <label>Dimension:<br />Length:</label>
-                <input type="number" name="length" min="0" step="0.01" placeholder="20" value="<?php echo htmlspecialchars($length);?>"/>
-                <br />
+                    <label>Length: (inches)</label> <br />
+                    <input type="number" name="length" min="0" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($length);?>"/>
+                    <br />
 
-                <label>Width:</label>
-                <input type="number" name="width" min="0" step="0.01" placeholder="20" value="<?php echo htmlspecialchars($width);?>"/>
-                <br />
+                    <label>Width: (inches)</label> <br />
+                    <input type="number" name="width" min="0" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($width);?>"/>
+                    <br />
 
-                <label>Height</label>
-                <input type="number" name="height" min="0" step="0,01" placeholder="20" value="<?php echo htmlspecialchars($height);?>"/>
-                <br />
+                    <label>Height: (inches)</label> <br />
+                    <input type="number" name="height" min="0" step="0,01" placeholder="20.00" value="<?php echo htmlspecialchars($height);?>"/>
+                    <br />
 
-                <label>Total Value: $</label>
-                <input type="number" name="total" min="0" step="0.01" placeholder="350" value="<?php echo htmlspecialchars($total);?>">
-                <br />
+                    <label>Total Value: $</label> <br />
+                    <input type="number" name="total" min="0" step="0.01" placeholder="350.00" value="<?php echo htmlspecialchars($total);?>">
+                    <br />
+                    <br />
 
-                <input type="submit" value="Create">
+                    <input type="submit" value="Create">
 
-            </form>
+                </form>
+            </div>
         </main>
 
         <?php include("footer.php");?>

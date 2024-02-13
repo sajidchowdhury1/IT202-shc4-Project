@@ -5,7 +5,7 @@ body {
 
 header {
     background-color: rgb(102,102,204, 0.4);
-    padding: 40;
+    padding: 40px;
     font-family:'Courier New', Courier, monospace;
 
 }
@@ -14,20 +14,41 @@ header img {
     float: left;
 }
 
+header h1{
+    padding-left: 75px;
+    font-weight: stronger;
+}
+
+header hr, footer hr{
+    height: 1px;
+    background-color: black;
+}
+
 nav {
     text-align: center;
 }
 
-nav a {
-    font-size: 20;
+nav a[href] {
+    font-size: 20px;
     font-weight: bold;
+    margin: 5px;
 }
+
+nav a:focus, nav a:hover {
+    color: white;
+}
+
+nav a:active {
+    color: aquamarine;
+}
+
 
 footer {
     background-color: rgb(102,102,204, 0.4);
-    padding: 40;
+    padding: 40px;
     font-family:'Courier New', Courier, monospace;
-    font-size: 20;
+    font-size: 20px;
+    text-align: center;
 }
 
 #main_page {
@@ -35,6 +56,62 @@ footer {
 }
 
 #main_page h2 {
-
     text-align: center;
+    font-size: 40px;
 }
+
+#main_text {
+    border: 3px dotted black;
+    padding: 20px;
+    font-size: 15px;
+    margin: 0 30px;
+
+}
+
+main .home {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+div.home img.homeimg {
+    margin-right: 30px;
+}
+
+/* shipping page */
+
+#form h2{
+    text-align: center;
+    font-size: 40px;
+}
+
+#form {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#shipform {
+    border: 5px dashed black;
+    border-radius: 2%;
+    margin-left: 420px;
+    margin-right: 420px;
+    padding: 30px 0px;
+    margin-bottom: 30px;
+}
+
+form label {
+    float:left;
+}
+
+form input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+
+
+
+

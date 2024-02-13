@@ -2,6 +2,7 @@
     <head>
         <title>Smarter Homes Technology</title>
         <link rel="stylesheet" href="smart_home.css"/>
+        <link rel="shortcut icon" href="images/homeicon.png">
     </head>
     
     <body>
@@ -20,10 +21,12 @@
             </p>
 
             <!-- these are the images that will be shown on the page-->
-            <img src="images/smart_camera.jpeg" alt="Smart Security Cameras" height="150"/>
-            <img src="images/smart_doorbell.jpeg" alt="Smart Doorbells" height="150"/>
-            <img src="images/smart_lightbulb.jpg" alt="Smart Lightbulb" height="150"/>
-            <img src="images/smart_windowblinds.jpeg" alt="Smart Window Blinds" height="150"/>
+            <div class="home">
+                <img class="homeimg" src="images/smart_camera.jpeg" alt="Smart Security Cameras" height="150"/>
+                <img class="homeimg" src="images/smart_doorbell.jpeg" alt="Smart Doorbells" height="150"/>
+                <img class="homeimg" src="images/smart_lightbulb.jpg" alt="Smart Lightbulb" height="150"/>
+                <img class="homeimg" src="images/smart_windowblinds.jpeg" alt="Smart Window Blinds" height="150"/>
+            </div>
         </main>
 
         <!-- php page for the footer -->
