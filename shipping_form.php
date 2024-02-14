@@ -28,7 +28,7 @@
             <h2>Smarter Homes Shipping</h2>
             <?php 
                 // this is to print the error message
-                echo '<p style="color: red; font-weight: bold; font-size: 20px; text-align: center;">' . $error_message . "</p>";
+                echo '<p style="color: red; font-weight: bold; font-size: 15px; text-align: center;">' . $error_message . "</p>";
             ?>
             <div id="shipform">
                 <form action="shipping_label.php" method="post">

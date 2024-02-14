@@ -55,6 +55,8 @@
         $error_message .= "Zip code format is not valid.<br>";
     } else if (strlen($zip) > 5){
         $error_message .= "Zip code format is not valid.<br>";
+    } else if (strlen($zip) < 5){
+        $error_message .= "Zip code format is not valid.<br>";
     }
 
     if($state === FALSE){
@@ -89,36 +91,44 @@
     </head>
     <body>
         <?php include("header.php")?>    
-            <main>
-            <h2>Shipping Label</h2>
+            <main id="slabel">
+                <h2>Shipping Label</h2>
 
-            <!-- label -->
-            <div id="shipping_label">
-                
-                <p id="usps" class="priority">P</p>
+                <!-- label -->
+                <div id="shipping_label">
+                    
+                    <div id="labeltop">
+                        <p id="usps">P</span>
 
-                <p id="paid">PRIORITY MAIL<br/> U.S. POSTAGE PAID <br /> </p>
-                
-                <p id="usps">USPS PRIORITY MAIL</p>
+                        <p id="paid">PRIORITY MAIL<br/> U.S. POSTAGE PAID <br /> </span>
 
-                <p id="company">Smarter Homes Technology<br>555 Mountain St.<br>Newark, NJ 07101</p>
+                    </div>
+                    
+                    
+                    <p id="priority">USPS PRIORITY MAIL</p>
 
-                <p id="info"><?php echo htmlspecialchars("Shipping Date: $ship_date");?><br />Mailed from 07101<br />2 lbs <br/>
-                <?php echo htmlspecialchars("L: $length_f" . '" x' . " W: $width_f" . '" x' . " H: $height_f" . '"');?><br/>
-                <?php echo htmlspecialchars("Value: $total_f");?>
-                </p>
+                    <div id="labelmid">
 
-                <p id="mailing_to"><?php echo htmlspecialchars("$first_name $last_name");?> <br/>
-                    <?php echo htmlspecialchars($street_address);?> <br/> <?php echo htmlspecialchars("$city, $state $zip");?>
-                </p>
+                        <p id="company">Smarter Homes Technology<br>555 Mountain St.<br>Newark, NJ 07101</p>
 
-                <p id="ordernum"><?php echo htmlspecialchars("Order Number: $order_number")?></p>
+                        <p id="info"><?php echo htmlspecialchars("Shipping Date: $ship_date");?><br />Mailed from 07101<br />2 lbs <br/>
+                        <?php echo htmlspecialchars("L: $length_f" . '" x' . " W: $width_f" . '" x' . " H: $height_f" . '"');?><br/>
+                        <?php echo htmlspecialchars("Value: $total_f");?>
+                        </p>
 
-                <!-- image of barcode and tracking-->
-                <img src="images/barcode.png" alt="barcode" id="tracking"/>
-                <p id="tracking" class="trackingnum">Tracking Number: 3242 3424 7436 8564 3217 53</p>
-                
-            </div>    
+                        <p id="mailing_to"><?php echo htmlspecialchars("$first_name $last_name");?> <br/>
+                            <?php echo htmlspecialchars($street_address);?> <br/> <?php echo htmlspecialchars("$city, $state $zip");?>
+                        </p>
+                    </div>
+
+                    <div id="labeldown">
+                        <p id="ordernum"><?php echo htmlspecialchars("Order Number: $order_number")?></p>
+
+                        <!-- image of barcode and tracking-->
+                        <img id="barcode" src="images/barcode.png" alt="barcode" id="tracking"/>
+                        <p id="tracking" class="trackingnum">Tracking Number: 3242 3424 7436 8564 3217 53</p>
+                    </div>
+                </div>    
             
             </main>
 
