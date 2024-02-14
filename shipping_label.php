@@ -121,6 +121,8 @@
                         </p>
                     </div>
 
+                    <hr id="line"/>
+
                     <div id="labeldown">
                         <p id="ordernum"><?php echo htmlspecialchars("Order Number: $order_number")?></p>
 
@@ -128,6 +130,8 @@
                         <img id="barcode" src="images/barcode.png" alt="barcode" id="tracking"/>
                         <p id="tracking" class="trackingnum">Tracking Number: 3242 3424 7436 8564 3217 53</p>
                     </div>
+                    
+                    <hr id="line" />
                 </div>    
             
             </main>

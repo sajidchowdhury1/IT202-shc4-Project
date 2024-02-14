@@ -42,6 +42,10 @@ nav a:active {
     color: aquamarine;
 }
 
+nav a:link {
+    color: black;
+}
+
 
 footer {
     background-color: rgb(102,102,204, 0.4);
@@ -124,8 +128,9 @@ form input {
     background-color: white;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-align: center;
-    margin: 50px 350px;
+    margin: 50px 400px;
     padding: 0px;
+    
 }
 
 div #usps {
@@ -139,10 +144,11 @@ div #usps {
 
 div #paid {
     border: 3px solid black;
-    margin-left: 450px;
+    margin-left: 800px;
     margin-right: 50px;
     padding: 40px 50px;
-    margin-bottom: 0px;
+    /*margin-bottom: 0px;*/
+    clear: right;
 }
 
 #priority {
@@ -160,23 +166,25 @@ div #paid {
     margin-top: 10px;
     margin-left: 30px;
     font-size: 20px;
+    clear: center;
 }
 
 #info {
     margin-top: 10px;
     margin-right: 50px;
-    margin-left: 440px;
+    margin-left: 800px;
     font-size: 20px;
     text-align: left;
     padding-right: 0px;
+    clear: right;
 }
 
 #mailing_to {
-    margin-top: 150px;
+    margin-top: 250px;
     text-align: left;
     font-size: 30px;
     margin-left: 150px;
-    margin-bottom: 70px;
+    margin-bottom: 120px;
 }
 
 #ordernum, #tracking {
@@ -185,5 +193,11 @@ div #paid {
 
 #barcode {
     width: 750px;
-    height: 100px;
+    height: 200px;
+}
+
+#line {
+    min-height: 5px;
+    background-color: black;
+    margin-bottom: 90px;
 }
