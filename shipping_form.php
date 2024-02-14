@@ -1,4 +1,6 @@
 <?php 
+    // Sajid Chowdhury Feb 14, 2024 IT202-006 Phase 1 shc4@njit.edu
+
     // default values
     if(!isset($first_name)){ $first_name = ''; }
     if(!isset($last_name)){ $last_name = ''; }
@@ -53,35 +55,35 @@
                     <br />
 
                     <label>State (Initial):</label> <br />
-                    <input type="text" name="state" maxlength="2" placeholder="Ex. NJ" value="<?php echo htmlspecialchars($state);?>"/>
+                    <input type="text" name="state" placeholder="Ex. NJ" value="<?php echo htmlspecialchars($state);?>"/>
                     <br />
 
                     <label>Zip Code:</label> <br />
-                    <input type="text" min="0" name="zip" maxlength="5" placeholder="Ex. 12345" value="<?php echo htmlspecialchars($zip);?>"/>
+                    <input type="text" min="0" name="zip" placeholder="Ex. 12345" value="<?php echo htmlspecialchars($zip);?>"/>
                     <br />
 
                     <label>Ship Date:</label> <br />
-                    <input type="date" name="ship_date" value="<?php echo htmlspecialchars($ship_date);?>"/>
+                    <input type="date" name="ship_date" required value="<?php echo htmlspecialchars($ship_date);?>"/>
                     <br />
 
                     <label>Order Number:</label> <br />
-                    <input type="number" name="order_number" placeholder="231343" value="<?php echo htmlspecialchars($order_number);?>"/>
+                    <input type="number" name="order_number" min="0" placeholder="231343" value="<?php echo htmlspecialchars($order_number);?>"/>
                     <br />
 
                     <label>Length: (inches)</label> <br />
-                    <input type="number" name="length" min="0" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($length);?>"/>
+                    <input type="number" name="length" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($length);?>"/>
                     <br />
 
                     <label>Width: (inches)</label> <br />
-                    <input type="number" name="width" min="0" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($width);?>"/>
+                    <input type="number" name="width" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($width);?>"/>
                     <br />
 
                     <label>Height: (inches)</label> <br />
-                    <input type="number" name="height" min="0" step="0,01" placeholder="20.00" value="<?php echo htmlspecialchars($height);?>"/>
+                    <input type="number" name="height" step="0,01" placeholder="20.00" value="<?php echo htmlspecialchars($height);?>"/>
                     <br />
 
                     <label>Total Value: $</label> <br />
-                    <input type="number" name="total" min="0" step="0.01" placeholder="350.00" value="<?php echo htmlspecialchars($total);?>">
+                    <input type="number" name="total" step="0.01" placeholder="350.00" value="<?php echo htmlspecialchars($total);?>">
                     <br />
                     <br />
 

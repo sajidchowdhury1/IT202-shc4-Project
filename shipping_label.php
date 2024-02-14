@@ -1,4 +1,6 @@
 <?php
+    // Sajid Chowdhury Feb 14, 2024 IT202-006 Phase 1 shc4@njit.edu
+
     //print_r($_POST);
     //initialization
     $first_name = filter_input(INPUT_POST, "first_name");
@@ -54,7 +56,7 @@
     } else if (strlen($zip) <= 0){
         $error_message .= "Zip code format is not valid.<br>";
     } else if (strlen($zip) > 5){
-        $error_message .= "Zip code format is not valid.<br>";
+        $error_message .= "Zip code format is not valid. Need to be 5 digits.<br>";
     } else if (strlen($zip) < 5){
         $error_message .= "Zip code format is not valid.<br>";
     }

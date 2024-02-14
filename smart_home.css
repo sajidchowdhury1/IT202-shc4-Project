@@ -1,3 +1,5 @@
+/* Sajid Chowdhury Feb 14, 2024 IT202-006 Phase 1 shc4@njit.edu */
+
 /* main page */
 body {
     background-color: rgba(0, 153, 255, 0.1);
@@ -104,6 +106,7 @@ div.home img.homeimg {
 
 form label {
     float:left;
+    font-size: 20px;
 }
 
 form input {
