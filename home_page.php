@@ -15,9 +15,9 @@
         
             <!-- the body of text that is shown once entered in this page -->
             <p id="main_text">
-                Smarter Homes was found in 2022 after the owner Sajid Chowdhury found interest with smart devices and IoT hardware.
+                Smarter Homes was founded in 2022 after the owner Sajid Chowdhury had interest with smart devices and IoT hardware.
                 Ever since he found a great fascination with the advancement of this new technology, he wanted to make it available for all.
-                The purpose of this store is for people have easier access find the latest and greatest smart home devices for their needs.
+                The purpose of this store is for people to have easier access to find the latest and greatest smart home devices for their needs.
                 We have smart products ranging from light bulbs, doorbells, plugs, window blinds, and security cameras.
             </p>
 
