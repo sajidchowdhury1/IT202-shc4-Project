@@ -81,8 +81,26 @@ main .home {
 }
 
 div.home img.homeimg {
-    margin-right: 30px;
+    height: 200px;
 }
+
+div.home #imggroup1, div.home #imggroup2, div.home #imggroup3, div.home #imggroup4{
+    float: center;
+    margin: 0px 35px;
+    clear: right;
+    border: 3px dotted black;
+    margin-left: 500px;
+    margin-right: 500px;
+    padding: 10px 0px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+#imggroup1 figcaption{
+    text-align: center;
+    font-size: 15px;
+}
+
 
 /* shipping page */
 

@@ -23,10 +23,31 @@
 
             <!-- these are the images that will be shown on the page-->
             <div class="home">
-                <img class="homeimg" src="images/smart_camera.jpeg" alt="Smart Security Cameras" height="150"/>
-                <img class="homeimg" src="images/smart_doorbell.jpeg" alt="Smart Doorbells" height="150"/>
-                <img class="homeimg" src="images/smart_lightbulb.jpg" alt="Smart Lightbulb" height="150"/>
-                <img class="homeimg" src="images/smart_windowblinds.jpeg" alt="Smart Window Blinds" height="150"/>
+                <div id="imggroup1">
+                    <figure>
+                        <img class="homeimg" src="images/smart_camera.jpeg" alt="Smart Security Cameras"/>
+                        <figcaption>Fig 1: Smart Security Camera</figcaption>
+                    <figure>
+                </div >
+                <div id="imggroup2">
+                    <figure>
+                        <img class="homeimg" src="images/smart_doorbell.jpeg" alt="Smart Doorbells"/>
+                        <figcaption>Fig 2: Smart Doorbells</figcaption>
+                    </figure>
+                </div>
+                <div id="imggroup3">
+                    <figure>
+                        <img class="homeimg" src="images/smart_lightbulb.jpg" alt="Smart Lightbulb"/>
+                        <figcaption>Fig 3: Smart Lightbulbs</figcaption>
+                    </figure>
+                </div>
+                <div id="imggroup4">
+                    <figure>
+                        <img class="homeimg" src="images/smart_windowblinds.jpeg" alt="Smart Window Blinds"/>
+                        <figcaption>Fig 4: Smart Window Blinds</figcaption>
+                    </figure>
+                </div>
+
             </div>
         </main>
 
