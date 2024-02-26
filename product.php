@@ -1,7 +1,8 @@
+<!-- Sajid Chowdhury Feb 26, 2024 IT202-006 Phase 1 shc4@njit.edu-->
 <?php
     require_once('database_njit.php');
 
-    // sql statement
+    // sql statement from SmarterHomesTech
     $query = 'SELECT SmarterHomesTechCategoryID, SmarterHomesTechCode, SmarterHomesTechName, description, SmarterHomesTechColor, price
             FROM SmarterHomesTech';
     $statement = $db->prepare($query);
@@ -9,7 +10,13 @@
     $products = $statement->fetchAll();
     $statement->closeCursor();
     
-
+    // sql statement from SmarterHomesTechCategories
+    $queryCategories = 'SELECT SmarterHomesTechCategoryID, SmarterHomesTechCategoryName
+                        FROM SmarterHomesTechCategories';
+    $statement2 = $db->prepare($queryCategories);
+    $statement2->execute();
+    $categoryName = $statement2->fetchAll();
+    $statement2->closeCursor();
     
 ?>
 
@@ -21,7 +28,7 @@
     </head>
     <body>
         <?php include('header.php');?>
-        <main>
+        <main class="product">
             <h2>Products</h2>
 
             <!-- table of the products-->
@@ -36,7 +43,15 @@
                 </tr>
                 <?php foreach($products as $product) : ?>
                 <tr>
-                    <td></td>
+                    <td>
+                        <?php 
+                            foreach($categoryName as $name) :
+                            if($product['SmarterHomesTechCategoryID'] === $name['SmarterHomesTechCategoryID']){
+                                echo $name['SmarterHomesTechCategoryName'];
+                            }
+                            endforeach;    
+                        ?>
+                    </td>
                     <td><?php echo $product['SmarterHomesTechCode'];?></td>
                     <td><?php echo $product['SmarterHomesTechName'];?></td>
                     <td><?php echo $product['description'];?></td>

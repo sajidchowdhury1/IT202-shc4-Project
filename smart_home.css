@@ -1,4 +1,5 @@
 /* Sajid Chowdhury Feb 14, 2024 IT202-006 Phase 1 shc4@njit.edu */
+/* Sajid Chowdhury Updated: Feb 26, 2024 IT202-006 Phase 1 shc4@njit.edu */
 
 /* main page */
 body {
@@ -221,4 +222,44 @@ div #paid {
     min-height: 5px;
     background-color: black;
     margin-bottom: 90px;
+}
+
+/* Product page */
+
+main.product h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+main.product table {
+    border: 2px solid black;
+    margin: 35px 60px;
+}
+
+table th {
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+table td {
+    text-align: center;
+    padding: 10px 20px;
+    border: 2px solid black;
+}
+
+/* error page */
+
+main.error h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+main.error p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 17px;
+    padding: 20px;
+    color: red;
 }
