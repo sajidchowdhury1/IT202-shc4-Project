@@ -5,7 +5,7 @@
 
     try {
         $db = new PDO($dsn, $username, $password);
-        //echo '<p>Successfully connected to NJIT database</p>';
+        echo '<p>Successfully connected to NJIT database</p>';
     } catch (PDOException $ex) {
         $error_message = $ex->getMessage();
         include('database_error.php');
