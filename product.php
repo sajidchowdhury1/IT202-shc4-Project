@@ -38,7 +38,6 @@
                     <th>Code</th>
                     <th>Product Name</th>
                     <th>Description</th>
-                    <th>Color</th>
                     <th>Price</th>
                 </tr>
                 <?php foreach($products as $product) : ?>
@@ -55,7 +54,6 @@
                     <td><?php echo $product['SmarterHomesTechCode'];?></td>
                     <td><?php echo $product['SmarterHomesTechName'];?></td>
                     <td><?php echo $product['description'];?></td>
-                    <td><?php echo $product['SmarterHomesTechColor'];?></td>
                     <td><?php echo $product['price'];?></td>
                 </tr>
                 <?php endforeach; ?>

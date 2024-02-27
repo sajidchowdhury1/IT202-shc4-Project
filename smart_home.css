@@ -240,12 +240,14 @@ main.product table {
 table th {
     font-size: 20px;
     border: 2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 table td {
     text-align: center;
     padding: 10px 20px;
     border: 2px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* error page */
