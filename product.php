@@ -33,32 +33,34 @@
             <h2>Products</h2>
 
             <!-- table of the products-->
-            <table>
-                <tr>
-                    <th>Category</th>
-                    <th>Code</th>
-                    <th>Product Name</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                </tr>
-                <?php foreach($products as $product) : ?>
-                <tr>
-                    <td>
-                        <?php 
-                            foreach($categoryName as $name) :
-                            if($product['SmarterHomesTechCategoryID'] === $name['SmarterHomesTechCategoryID']){
-                                echo $name['SmarterHomesTechCategoryName'];
-                            }
-                            endforeach;    
-                        ?>
-                    </td>
-                    <td><?php echo $product['SmarterHomesTechCode'];?></td>
-                    <td><?php echo $product['SmarterHomesTechName'];?></td>
-                    <td><?php echo $product['description'];?></td>
-                    <td><?php echo $product['price'];?></td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
+            <div class="products">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Code</th>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    <?php foreach($products as $product) : ?>
+                    <tr>
+                        <td>
+                            <?php 
+                                foreach($categoryName as $name) :
+                                if($product['SmarterHomesTechCategoryID'] === $name['SmarterHomesTechCategoryID']){
+                                    echo $name['SmarterHomesTechCategoryName'];
+                                }
+                                endforeach;    
+                            ?>
+                        </td>
+                        <td><?php echo $product['SmarterHomesTechCode'];?></td>
+                        <td><?php echo $product['SmarterHomesTechName'];?></td>
+                        <td><?php echo $product['description'];?></td>
+                        <td><?php echo $product['price'];?></td>
+                    </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
         </main>
         <?php include('footer.php');?>
     </body>
