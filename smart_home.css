@@ -233,7 +233,7 @@ main.product h2 {
 }
 
 main.product table {
-    float: center;
+    text-align: center;
     border: 2px solid black;
     margin: 35px 60px;
     background-color: black;
