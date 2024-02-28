@@ -4,7 +4,8 @@
 
     // sql statement from SmarterHomesTech
     $query = 'SELECT SmarterHomesTechCategoryID, SmarterHomesTechCode, SmarterHomesTechName, description, SmarterHomesTechColor, price
-            FROM SmarterHomesTech';
+            FROM SmarterHomesTech
+            ORDER BY SmarterHomesTechCategoryID';
     $statement = $db->prepare($query);
     $statement->execute();
     $products = $statement->fetchAll();

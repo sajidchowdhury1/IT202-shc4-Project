@@ -233,14 +233,18 @@ main.product h2 {
 }
 
 main.product table {
+    float: center;
     border: 2px solid black;
     margin: 35px 60px;
+    background-color: black;
 }
 
 table th {
     font-size: 20px;
     border: 2px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    padding: 10px 20px;
 }
 
 table td {
@@ -248,6 +252,7 @@ table td {
     padding: 10px 20px;
     border: 2px solid black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: white;
 }
 
 /* error page */
