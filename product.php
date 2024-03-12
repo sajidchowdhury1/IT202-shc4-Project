@@ -1,4 +1,4 @@
-<!-- Sajid Chowdhury Feb 26, 2024 IT202-006 Phase 1 shc4@njit.edu-->
+<!-- Sajid Chowdhury Feb 26, 2024 IT202-006 Phase 2 shc4@njit.edu-->
 <?php
     require_once('database_njit.php');
 

@@ -1,5 +1,5 @@
 /* Sajid Chowdhury Feb 14, 2024 IT202-006 Phase 1 shc4@njit.edu */
-/* Sajid Chowdhury Updated: Feb 26, 2024 IT202-006 Phase 1 shc4@njit.edu */
+/* Sajid Chowdhury Updated: Feb 26, 2024 IT202-006 Phase 2 shc4@njit.edu */
 
 /* main page */
 body {
@@ -123,12 +123,12 @@ div.home #imggroup1, div.home #imggroup2, div.home #imggroup3, div.home #imggrou
     margin-bottom: 30px;
 }
 
-form label {
+#shippingform label {
     float:left;
     font-size: 20px;
 }
 
-form input {
+#shippingform input {
     width: 100%;
     height: 35px;
     margin-bottom: 7px;

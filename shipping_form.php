@@ -35,7 +35,7 @@
                 }
             ?>
             <div id="shipform">
-                <form action="shipping_label.php" method="post">
+                <form id="shippingform" action="shipping_label.php" method="post">
 
                     <!--error message -->
 
@@ -81,7 +81,7 @@
                     <br />
 
                     <label>Height: (inches)</label> <br />
-                    <input type="number" name="height" step="0,01" placeholder="20.00" value="<?php echo htmlspecialchars($height);?>"/>
+                    <input type="number" name="height" step="0.01" placeholder="20.00" value="<?php echo htmlspecialchars($height);?>"/>
                     <br />
 
                     <label>Total Value: $</label> <br />
