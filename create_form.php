@@ -11,6 +11,10 @@
     $statement->closeCursor();
 
     // setting variables for code, name, description, and price
+    if(!isset($product_code)){ $product_code = '';}
+    if(!isset($product_name)){ $product_name = '';}
+    if(!isset($description)){ $description = '';}
+    if(!isset($product_price)){ $product_price = '';}
 ?>
 
 <html>
@@ -24,6 +28,12 @@
         <main>
             <h2>Create Product</h2>
 
+            <?php 
+                if(isset($error_message)){
+                    echo '<p>' . $error_message . '</p>';
+                }
+            ?>
+
             <form action="create_page.php" method="post">
                 <label>Category:</label>
                 <select name="category_id">
@@ -36,25 +46,33 @@
                 <br />
 
                 <label>Product Code:</label>
-                <input type="text" name="product_code" placeholder="Ex. light21" value="" />
+                <input type="text" name="product_code" placeholder="Ex. light21" value="<?php htmlspecialchars($product_code)?>" />
                 <br />
 
                 <label>Product Name:</label>
-                <input type="text" name="product_name" placeholder="Ex. smart light" value="" />
+                <input type="text" name="product_name" placeholder="Ex. smart light" value="<?php htmlspecialchars($product_name)?>" />
                 <br />
 
                 <label for="description">Description:</label>
                 <br />
-                <textarea name="description" placeholder="this product has..." value=""></textarea>
+                <textarea name="description" placeholder="this product has..." value="<?php htmlspecialchars($description)?>"></textarea>
                 <br />
 
                 <label>Price:</label>
-                <input type="number" step="0.01" name="product_price" placeholder="100.00" value="">
+                <input type="number" step="0.01" name="product_price" placeholder="100.00" value="<?php htmlspecialchars($product_price)?>">
                 <br />
 
                 <input type="submit" value="Submit">
 
             </form>
+
+            <div>
+                <form action="create_form.php">
+                    <label>Clear Fill-In:</label>
+                    <br />
+                    <input type="submit" value="Restart">
+                </form>
+            </div>
 
         </main>
         <?php include('footer.php');?>
