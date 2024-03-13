@@ -12,7 +12,7 @@
     // validating inputs
     if($product_code === NULL || $product_code === FALSE) {
         $error_message .= 'You have not typed in a code in the appropriate section.<br>';
-    } else if (strlen($product_code) > 10 || strlen($product_code) < 0) {
+    } else if (strlen($product_code) > 10 || strlen($product_code) <= 0) {
         $error_message .= 'The code length needs to be greater than 0 and less than or equal to 10.<br>';
     }
 
@@ -22,6 +22,8 @@
 
     if($description === NULL || $description === FALSE) {
         $error_message .= 'You have not typed in a description in the appropriate section.<br>';
+    } else if (strlen($description) === 0) {
+        $error_message .= 'There needs to be a description for the product.<br>';
     }
 
     if($product_price === NULL || $product_price === FALSE) {
