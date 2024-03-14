@@ -14,6 +14,7 @@
     if(!isset($product_code)){ $product_code = '';}
     if(!isset($product_name)){ $product_name = '';}
     if(!isset($description)){ $description = '';}
+    if(!isset($product_color)){ $product_color = '';}
     if(!isset($product_price)){ $product_price = '';}
 ?>
 
@@ -34,7 +35,7 @@
                 }
             ?>
 
-            <form action="create_page.php" method="post">
+            <form action="create_process.php" method="post">
                 <label>Category:</label>
                 <select name="category_id">
                     <?php foreach ($categories as $category) : ?>
@@ -46,20 +47,24 @@
                 <br />
 
                 <label>Product Code:</label>
-                <input type="text" name="product_code" placeholder="Ex. light21" value="<?php htmlspecialchars($product_code)?>" />
+                <input type="text" name="product_code" placeholder="Ex. light21" value="<?php echo htmlspecialchars($product_code)?>" />
                 <br />
 
                 <label>Product Name:</label>
-                <input type="text" name="product_name" placeholder="Ex. smart light" value="<?php htmlspecialchars($product_name)?>" />
+                <input type="text" name="product_name" placeholder="Ex. smart light" value="<?php echo htmlspecialchars($product_name)?>" />
                 <br />
 
                 <label for="description">Description:</label>
                 <br />
-                <textarea name="description" placeholder="this product has..." value="<?php htmlspecialchars($description)?>"></textarea>
+                <textarea name="description" placeholder="this product has..." value="<?php echo htmlspecialchars($description)?>"></textarea>
+                <br />
+
+                <label>Product Color:</label>
+                <input type="text" name="product_color" placeholder="Ex. red" value="<?php echo htmlspecialchars($product_color)?>" />
                 <br />
 
                 <label>Price:</label>
-                <input type="number" step="0.01" name="product_price" placeholder="100.00" value="<?php htmlspecialchars($product_price)?>">
+                <input type="number" step="0.01" name="product_price" placeholder="100.00" value="<?php echo htmlspecialchars($product_price)?>">
                 <br />
 
                 <input type="submit" value="Submit">
@@ -68,7 +73,7 @@
 
             <div>
                 <form action="create_form.php">
-                    <label>Clear Fill-In:</label>
+                    <label>Clear Form:</label>
                     <br />
                     <input type="submit" value="Restart">
                 </form>
