@@ -33,6 +33,9 @@
                 if(isset($error_message)){
                     echo '<p>' . $error_message . '</p>';
                 }
+                if(isset($success_message)){
+                    echo '<p>' . $success_message . '</p>';
+                }
             ?>
 
             <form action="create_process.php" method="post">

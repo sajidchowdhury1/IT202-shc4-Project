@@ -4,7 +4,7 @@
 
     $category_id = filter_input(INPUT_POST, 'category_id');
     $product_code = filter_input(INPUT_POST, 'product_code');
-    $product_name = filter_input(INPUT_POST, '$product_name');
+    $product_name = filter_input(INPUT_POST, 'product_name');
     $description = filter_input(INPUT_POST, 'description');
     $product_color = filter_input(INPUT_POST, 'product_color');
     $product_price = filter_input(INPUT_POST, 'product_price', FILTER_VALIDATE_FLOAT);
@@ -31,11 +31,11 @@
         }
     endforeach;
 
-    if(strlen($product_name) == 0) {
+    if($product_name === '') {
         $error_message .= 'You need to type in a name.<br>';
     }
 
-    if (strlen($description) <= 0) {
+    if ($description === '') {
         $error_message .= 'There needs to be a description for the product.<br>';
     }
 
