@@ -270,3 +270,65 @@ main.error p {
     padding: 20px;
     color: red;
 }
+
+/* create page */
+
+#createpage h2 {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+#createpage {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#createform {
+    border: 5px dashed black;
+    border-radius: 2%;
+    margin-left: 420px;
+    margin-right: 420px;
+    padding: 30px 0px;
+    margin-bottom: 30px;
+}
+
+#createform label {
+    float:left;
+    font-size: 20px;
+}
+
+#createform input, #createform select {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+#createform textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
+
+#clear {
+    border: 5px dotted black;
+    border-radius: 10%;
+    margin-left: 420px;
+    margin-right: 420px;
+    padding: 30px 0px;
+    margin-bottom: 30px;
+}
+
+#clear input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+}
