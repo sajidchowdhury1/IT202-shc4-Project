@@ -3,7 +3,7 @@
     //print_r($_POST);
     require_once('database_njit.php');
 
-    $category_id = filter_input(INPUT_POST, 'category_id');
+    $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
     $product_code = filter_input(INPUT_POST, 'product_code');
     $product_name = filter_input(INPUT_POST, 'product_name');
     $description = filter_input(INPUT_POST, 'description');
