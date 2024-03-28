@@ -3,7 +3,7 @@
     require_once('database_njit.php');
 
     // sql statement from SmarterHomesTech
-    $query = 'SELECT SmarterHomesTechCategoryID, SmarterHomesTechCode, SmarterHomesTechName, description, SmarterHomesTechColor, price
+    $query = 'SELECT SmarterHomesTechID, SmarterHomesTechCategoryID, SmarterHomesTechCode, SmarterHomesTechName, description, SmarterHomesTechColor, price
             FROM SmarterHomesTech
             ORDER BY SmarterHomesTechCategoryID';
     $statement = $db->prepare($query);
@@ -31,7 +31,11 @@
         <?php include('header.php');?>
         <main class="product">
             <h2>Products</h2>
-
+            <?php 
+                if(isset($product_message)){
+                    echo '<p style="color: red; font-weight: bold; font-size: 15px; text-align: center;">' . $product_message . '</p>';
+                }
+            ?>
             <!-- table of the products-->
             <div class="products">
                 <table>
@@ -41,6 +45,9 @@
                         <th>Product Name</th>
                         <th>Description</th>
                         <th>Price</th>
+                        <?php if($_SESSION['is_valid_admin']) {?>
+                        <th>Delete</th>
+                        <?php } ?>
                     </tr>
                     <?php foreach($products as $product) : ?>
                     <tr>
@@ -57,6 +64,15 @@
                         <td><?php echo $product['SmarterHomesTechName'];?></td>
                         <td><?php echo $product['description'];?></td>
                         <td><?php echo $product['price'];?></td>
+                        <?php if($_SESSION['is_valid_admin']) {?>
+                        <td>
+                            <form action="delete_process.php" method="post">
+                                <input type="hidden" name="sh_id" value="<?php echo $product['SmarterHomesTechID']; ?>">
+                                <input type="hidden" name="sh_category_id" value="<?php echo $product['SmarterHomesTechCategoryID']; ?>">
+                                <input type="submit" value="Delete">
+                            </form>
+                        </td>
+                        <?php } ?>
                     </tr>
                     <?php endforeach; ?>
                 </table>
