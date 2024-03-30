@@ -5,7 +5,8 @@
 <header>
     <a href="home_page.php"><img src="images/homeicon.png" alt="page icon" width="50" /></a>
     <h1>Smarter Homes Technology</h1>
-    <?php include('menu.php')?>
+    <?php session_start(); ?>
+    <?php include('menu.php');?>
     <nav>
         <a class="navlink" href="home_page.php">Home</a>
         <?php if($_SESSION['is_valid_admin']) {?>

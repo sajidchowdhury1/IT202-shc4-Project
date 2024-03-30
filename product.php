@@ -19,6 +19,7 @@
     $categoryName = $statement2->fetchAll();
     $statement2->closeCursor();
     
+    session_start();
 ?>
 
 <html>
