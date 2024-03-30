@@ -19,7 +19,6 @@
     $categoryName = $statement2->fetchAll();
     $statement2->closeCursor();
     
-    session_start();
 ?>
 
 <html>
@@ -46,7 +45,7 @@
                         <th>Product Name</th>
                         <th>Description</th>
                         <th>Price</th>
-                        <?php if($_SESSION['is_valid_admin']) {?>
+                        <?php if(isset($_SESSION['is_valid_admin'])) {?>
                         <th>Delete</th>
                         <?php } ?>
                     </tr>
@@ -65,7 +64,7 @@
                         <td><?php echo $product['SmarterHomesTechName'];?></td>
                         <td><?php echo $product['description'];?></td>
                         <td><?php echo $product['price'];?></td>
-                        <?php if($_SESSION['is_valid_admin']) {?>
+                        <?php if(isset($_SESSION['is_valid_admin'])) {?>
                         <td>
                             <form action="delete_process.php" method="post">
                                 <input type="hidden" name="sh_id" value="<?php echo $product['SmarterHomesTechID']; ?>">
