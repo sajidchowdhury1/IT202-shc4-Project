@@ -32,6 +32,11 @@
         <main class="product">
             <h2>Products</h2>
             <?php 
+                session_start();
+                if($_SESSION['is_valid_admin'] != true){
+                    echo '<p style="font-weight: bold; font-size: 20px; text-align: left;">To delete items off of the database you have to be logged in</p>';
+                }
+
                 if(isset($product_message)){
                     echo '<p style="color: red; font-weight: bold; font-size: 15px; text-align: center;">' . $product_message . '</p>';
                 }

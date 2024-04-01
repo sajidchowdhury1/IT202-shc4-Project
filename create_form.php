@@ -17,6 +17,12 @@
     if(!isset($description)){ $description = '';}
     if(!isset($product_color)){ $product_color = '';}
     if(!isset($product_price)){ $product_price = '';}
+
+    session_start();
+    if($_SESSION['is_valid_admin'] != true){
+        include('logout_error.php');
+        exit();
+    }
 ?>
 
 <html>

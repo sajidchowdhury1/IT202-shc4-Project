@@ -16,6 +16,12 @@
     if(!isset($height)){ $height = '';}
     if(!isset($total)){ $total = ''; }
 
+    session_start();
+    if($_SESSION['is_valid_admin'] != TRUE){
+        include('logout_error.php');
+        exit();
+    }
+
 ?>
 
 <html>
