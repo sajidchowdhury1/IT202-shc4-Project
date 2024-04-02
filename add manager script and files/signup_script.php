@@ -1,4 +1,5 @@
 <?php 
+    // Sajid Chowdhury Mar 27, 2024 IT202-006 Phase 4 shc4@njit.edu
     require_once('database_njit.php');
     function addSmarterHomesTechmanager($email, $password, $firstName, $lastName) {
         $db = getDB();
@@ -13,6 +14,6 @@
         $statement->execute();
         $statement->closeCursor();
     }
-    // password: $shtm$123
+    // password: $shtm$123 (every manager has this password)
     
 ?>

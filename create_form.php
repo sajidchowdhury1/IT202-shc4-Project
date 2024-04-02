@@ -1,5 +1,6 @@
 <?php
     // Sajid Chowdhury Mar 18, 2024 IT202-006 Phase 3 shc4@njit.edu
+    // Sajid Chowdhury Updated: Mar 27, 2024 IT202-006 Phase 4 shc4@njit.edu
     require_once("database_njit.php");
 
     // will get the ids and names from each of the category
