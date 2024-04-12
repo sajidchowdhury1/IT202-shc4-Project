@@ -39,7 +39,7 @@
                 }
 
                 if(isset($product_message)){
-                    echo '<p style="color: red; font-weight: bold; font-size: 15px; text-align: center;">' . $product_message . '</p>';
+                    echo '<p style="color: red; font-weight: bold; font-size: 20px; text-align: center;">' . $product_message . '</p>';
                 }
             ?>
             <!-- table of the products-->
@@ -66,23 +66,48 @@
                                 endforeach;    
                             ?>
                         </td>
-                        <td><?php echo $product['SmarterHomesTechCode'];?></td>
+                        <td>
+                            <form id="detail_form" action="product_detail.php" method="get">
+                                <input type="hidden" name="product_id" value="<?php echo $product['SmarterHomesTechID'];?>">
+                                <input type="submit" value="<?php echo $product['SmarterHomesTechCode'];?>">
+                            </form>
+                        </td>
                         <td><?php echo $product['SmarterHomesTechName'];?></td>
                         <td><?php echo $product['description'];?></td>
                         <td><?php echo $product['price'];?></td>
                         <?php if(isset($_SESSION['is_valid_admin'])) {?>
                         <td>
-                            <form action="delete_process.php" method="post">
+                            <form action="delete_process.php" method="post" >
                                 <input type="hidden" name="sh_id" value="<?php echo $product['SmarterHomesTechID']; ?>">
                                 <input type="hidden" name="sh_category_id" value="<?php echo $product['SmarterHomesTechCategoryID']; ?>">
-                                <input type="submit" value="Delete">
+                                <input id="delete" type="submit" value="Delete">
                             </form>
                         </td>
+
                         <?php } ?>
                     </tr>
                     <?php endforeach; ?>
                 </table>
             </div>
+            <script>
+                document.addEventListener(
+                "DOMContentLoaded",
+                    () => {
+                    const buttons = document.querySelectorAll("#delete");
+                    for (var button of buttons) {
+                        button.addEventListener(
+                            "click",
+                            (event) => {
+                                const confirmation = confirm("Are you sure you want to delete this item?");
+                                if(confirmation == false){
+                                    event.preventDefault();
+                                }
+                            }
+                        );
+                    }
+                   
+                });
+            </script>    
         </main>
         <?php include('footer.php');?>
     </body>
