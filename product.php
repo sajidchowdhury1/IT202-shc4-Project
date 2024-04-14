@@ -67,10 +67,10 @@
                             ?>
                         </td>
                         <td>
-                            <form id="detail_form" action="product_detail.php" method="get">
-                                <input type="hidden" name="product_id" value="<?php echo $product['SmarterHomesTechID'];?>">
-                                <input type="submit" value="<?php echo $product['SmarterHomesTechCode'];?>">
-                            </form>
+                            
+                            <a href="product_detail.php?product_id=<?php echo $product['SmarterHomesTechID'];?>">
+                            <?php echo $product['SmarterHomesTechCode'];?></a>
+                            
                         </td>
                         <td><?php echo $product['SmarterHomesTechName'];?></td>
                         <td><?php echo $product['description'];?></td>
