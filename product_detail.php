@@ -1,36 +1,50 @@
 <?php 
     require_once('database_njit.php');
 
-    $product_id = filter_input(INPUT_GET, 'product_id', FILTER_VALIDATE_INT);
-
-    
-    $errorCheck = "SELECT SmarterHomesTechID FROM SmarterHomesTech";
+    $errorCheck = 'SELECT SmarterHomesTechID FROM SmarterHomesTech';
     $statementError = $db->prepare($errorCheck);
     $statementError->execute();
     $error = $statementError->fetchAll();
     $statementError->closeCursor();
-    
-    if(in_array($product_id, $error, true)){
+
+    $product_id = filter_input(INPUT_GET, 'product_id', FILTER_VALIDATE_INT);
+
+    if ($product_id === NULL) {
         include("detail_error.php");
         exit();
     }
-        
-    $query = "SELECT * FROM SmarterHomesTech WHERE SmarterHomesTechID = :product_id";
-    $statement = $db->prepare($query);
-    $statement->bindValue(':product_id', $product_id);
-    $statement->execute();
-    $detail = $statement->fetch();
-    $statement->closeCursor();
 
-    $categoryNameQuery = "SELECT * FROM SmarterHomesTechCategories WHERE SmarterHomesTechCategoryID = " 
-                    . $detail['SmarterHomesTechCategoryID'];
-    $statement2 = $db->prepare($categoryNameQuery);
-    $statement2->execute();
-    $category = $statement2->fetch();
-    $statement2->closeCursor();
+    $is_valid = true; 
+
+    foreach ($error as $id) {
+        if ($id['SmarterHomesTechID'] === $product_id){
+            $is_valid = true; 
+
+            $query = "SELECT * FROM SmarterHomesTech WHERE SmarterHomesTechID = :product_id";
+            $statement = $db->prepare($query);
+            $statement->bindValue(':product_id', $product_id);
+            $statement->execute();
+            $detail = $statement->fetch();
+            $statement->closeCursor();
+
+            $categoryNameQuery = "SELECT * FROM SmarterHomesTechCategories WHERE SmarterHomesTechCategoryID = " 
+                            . $detail['SmarterHomesTechCategoryID'];
+            $statement2 = $db->prepare($categoryNameQuery);
+            $statement2->execute();
+            $category = $statement2->fetch();
+            $statement2->closeCursor();
+
+            break;
+        } else {
+            $is_valid = false;
+        }
+    }
+
+    if ($is_valid === false){
+        include("detail_error.php");
+        exit();
+    }
     
-
-
 ?>
 
 <html>
