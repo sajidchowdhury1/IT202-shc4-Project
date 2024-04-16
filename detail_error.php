@@ -6,7 +6,7 @@
     </head>
     <body>
         <?php include('header.php');?>
-        <main id="">
+        <main id="detail_error">
             <h2>Error</h2>
             <p>This product does not exist on the database.</p>
         </main>

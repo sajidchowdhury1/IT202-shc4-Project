@@ -395,3 +395,43 @@ header p:hover, header p:focus {
     font-size: 20px;
     color: red;
 }
+
+/* product detail css */
+
+#details {
+    text-align: center;
+}
+
+#prodetail {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#prodetail h2 { 
+    text-align: center;
+    font-size: 40px;
+}
+
+#detail_info {
+    text-align: center;
+}
+
+#detail_error {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#detail_error h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+#detail_error p {
+    text-align: center;
+    font-size: 20px;
+    color: red;
+}
+
+/* create form span css */
+#createform span {
+    font-size: 20px;
+    color: red;
+}

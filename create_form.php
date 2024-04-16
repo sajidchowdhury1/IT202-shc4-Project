@@ -35,8 +35,10 @@
     <body>
         <?php include('header.php');?>
         <main id="createpage">
+            <noscript>
+                <h2>You need JavaScript enabled to make full use of this website/page</h2>
+            </noscript>
             <h2>Create Product</h2>
-
             <?php 
                 if(isset($error_message)){
                     echo '<p style="color: red; font-weight: bold; font-size: 15px; text-align: center;">' . $error_message . '</p>';
@@ -109,6 +111,8 @@
                     } else if ($("#product_code").val().length < 4 || $("#product_code").val().length > 10){
                         event.preventDefault();
                         $("#code").text("Code has to be >= 4 or <= 10 characters");
+                    } else {
+                        $("#code").text("*");
                     }
                     // name
                     if($("#product_name").val() == '') {
@@ -117,7 +121,9 @@
                     } else if ($("#product_name").val().length < 10 || $("#product_name").val().length > 100){
                         event.preventDefault();
                         $("#name").text("Name has to be >= 10 or <= 100 characters");
-                    } 
+                    } else {
+                        $("#name").text("*");
+                    }
                     // description
                     if($("#description").val() == '') {
                         event.preventDefault();
@@ -125,7 +131,9 @@
                     } else if ($("#description").val().length < 10 || $("#description").val().length > 255){
                         event.preventDefault();
                         $("#text").text("Description has to be >= 10 or <= 255 characters");
-                    } 
+                    } else {
+                        $("#text").text("*");
+                    }
                     // color
                     if($("#product_color").val() == '') {
                         event.preventDefault();
@@ -133,7 +141,9 @@
                     } else if ($("#product_color").val().length < 1 || $("#product_color").val().length > 20){
                         event.preventDefault();
                         $("#color").text("Color has to be >= 10 or <= 20 characters");
-                    } 
+                    } else {
+                        $("#color").text("*");
+                    }
                     // price
                     if($("#product_price").val() == '') {
                         event.preventDefault();
@@ -141,7 +151,9 @@
                     } else if ($("#product_price").val() <= 0 || $("#product_price").val() > 100000){
                         event.preventDefault();
                         $("#price").text("Price should not be <= $0 or > $100,000");
-                    } 
+                    } else {
+                        $("#price").text("*");
+                    }
                 });
 
                 $("#reset_button").click( () => {

@@ -55,16 +55,22 @@
     </head>
     <body>
         <?php include('header.php');?>
-        <main>
+        <main id="prodetail">
+            <noscript>
+                <h2>You need JavaScript enabled to make full use of this website/page</h2>
+            </noscript>
             <h2>Details</h2>
-            <img height="450px" src="<?php echo 'images/'. $product_id . '-modified.jpg'?>" alt="<?php echo $detail['SmarterHomesTechName'] . " product";?>" />
-            <h3><?php echo $detail['SmarterHomesTechName'];?></h3>
-            <p>Category: <?php echo $category['SmarterHomesTechCategoryName'];?><p>
-            <p>Code: <?php echo $detail['SmarterHomesTechCode'];?><p>
-            <p>Price: <?php echo $detail['price'];?><p>
-            <p>Color: <?php echo $detail['SmarterHomesTechColor'];?><p>
-            <p>Description: <?php echo $detail['description'];?><p>
-            
+            <div id="details">
+                <img height="450px" src="<?php echo 'images/'. $product_id . '-modified.jpg'?>" alt="<?php echo $detail['SmarterHomesTechName'] . " product";?>" />
+            </div>
+            <div id="detail_info">
+                <h3><?php echo $detail['SmarterHomesTechName'];?></h3>
+                <p>Category: <?php echo $category['SmarterHomesTechCategoryName'];?><p>
+                <p>Code: <?php echo $detail['SmarterHomesTechCode'];?><p>
+                <p>Price: <?php echo $detail['price'];?><p>
+                <p>Color: <?php echo $detail['SmarterHomesTechColor'];?><p>
+                <p>Description: <?php echo $detail['description'];?><p>
+            </div>
             
         </main>
         <?php include('footer.php');?>

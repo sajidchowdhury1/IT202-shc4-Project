@@ -31,6 +31,9 @@
     <body>
         <?php include('header.php');?>
         <main class="product">
+            <noscript>
+                <h2>You need JavaScript enabled to make full use of this website/page</h2>
+            </noscript>
             <h2>Products</h2>
             <?php 
                 session_start();
