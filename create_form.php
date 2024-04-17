@@ -111,7 +111,7 @@
                         $("#code").text("Code cannot be blank");
                     } else if ($("#product_code").val().length < 4 || $("#product_code").val().length > 10){
                         event.preventDefault();
-                        $("#code").text("Code has to be >= 4 or <= 10 characters");
+                        $("#code").text("Code has to be > 4 or < 10 characters");
                     } else {
                         $("#code").text("*");
                     }
@@ -121,7 +121,7 @@
                         $("#name").text("Name cannot be blank");
                     } else if ($("#product_name").val().length < 10 || $("#product_name").val().length > 100){
                         event.preventDefault();
-                        $("#name").text("Name has to be >= 10 or <= 100 characters");
+                        $("#name").text("Name has to be > 10 or < 100 characters");
                     } else {
                         $("#name").text("*");
                     }
@@ -131,7 +131,7 @@
                         $("#text").text("Description cannot be blank");
                     } else if ($("#description").val().length < 10 || $("#description").val().length > 255){
                         event.preventDefault();
-                        $("#text").text("Description has to be >= 10 or <= 255 characters");
+                        $("#text").text("Description has to be > 10 or < 255 characters");
                     } else {
                         $("#text").text("*");
                     }
@@ -141,7 +141,7 @@
                         $("#color").text("Color cannot be blank");
                     } else if ($("#product_color").val().length < 10 || $("#product_color").val().length > 20){
                         event.preventDefault();
-                        $("#color").text("Color has to be >= 10 or <= 20 characters");
+                        $("#color").text("Color has to be > 10 or < 20 characters");
                     } else {
                         $("#color").text("*");
                     }
