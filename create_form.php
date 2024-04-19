@@ -139,9 +139,9 @@
                     if($("#product_color").val() == '') {
                         event.preventDefault();
                         $("#color").text("Color cannot be blank");
-                    } else if ($("#product_color").val().length < 10 || $("#product_color").val().length > 20){
+                    } else if ($("#product_color").val().length < 1 || $("#product_color").val().length > 20){
                         event.preventDefault();
-                        $("#color").text("Color has to be > 10 or < 20 characters");
+                        $("#color").text("Color has to be > 1 or < 20 characters");
                     } else {
                         $("#color").text("*");
                     }
