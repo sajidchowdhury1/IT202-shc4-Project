@@ -85,13 +85,13 @@
                 const image = $(this).attr('src');
                 const new_image = image.replace('-modified.jpg', '.jpg');
                 $(this).attr('src', new_image);
-            })
+            });
 
             $("img").mouseout( function() {
                 const image = $(this).attr('src');
                 const new_image = image.replace('.jpg', '-modified.jpg');
                 $(this).attr('src', new_image);
-            })
+            });
         });
     </script>
 
